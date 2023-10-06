@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './app.css'
 import { PDFViewer } from '@react-pdf/renderer'
-import { v4 as uuidv4 } from "uuid";
 
 import Tabs from './components/tabs'
 
@@ -71,7 +70,7 @@ const App = () => {
       const data = event.target;
       const index = parseInt(split[1]);
 
-      let updatedData = activeData as WorkDataType[];
+      const updatedData = activeData as WorkDataType[];
       updatedData[index] = {...updatedData[index], [dataId]: data.value}
       setActiveData([...updatedData]);
       console.log(activeData);
@@ -81,8 +80,9 @@ const App = () => {
   }
 
   const onAdd = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const _target = event;
     if(activeTab === 1) {
-      let newWorkField: WorkDataType = {
+      const newWorkField: WorkDataType = {
         position: '',
         company: '',
         location: '',
@@ -93,7 +93,7 @@ const App = () => {
 
       setActiveData([...updatedData]);
     } else if(activeTab === 2) {
-      let newEduField: EduDataType = {
+      const newEduField: EduDataType = {
         program: '',
         degree: '',
         school: '',
@@ -107,6 +107,7 @@ const App = () => {
   }
 
   const onDelete = (index: number) => (event: React.MouseEvent<HTMLButtonElement>) => {
+    const _target = event;
     if(activeTab === 1 || activeTab === 2) {
       const updatedData = activeData as WorkDataType[];
       updatedData.splice(index, 1);

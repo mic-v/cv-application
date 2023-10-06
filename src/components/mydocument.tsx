@@ -1,7 +1,5 @@
-import React from 'react';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import { EduDataType, PersonalDataType, WorkDataType } from '../config/formconfig';
-import PageMode from '@react-pdf/renderer'
 
 // Create styles
 const styles = StyleSheet.create({
