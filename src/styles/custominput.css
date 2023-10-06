@@ -1,0 +1,41 @@
+
+
+.CustomInputContainer {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.CustomInputContainer label {
+    position: absolute;
+
+    translate: 2% 50%;
+
+    text-transform: capitalize;
+
+    transition: 0.2s ease;
+
+    width: 100%;
+}
+
+.CustomInputContainer input {
+    padding: 0.75em 0.5em;
+    
+    transition: 0.2s ease;
+}
+
+.CustomInputContainer input:focus ~ label {
+    translate: 0% 10%;
+
+    font-size: x-small;
+}
+
+.CustomInputContainer input:valid ~ label {
+    translate: 0% 10%;
+
+    font-size: x-small;
+}

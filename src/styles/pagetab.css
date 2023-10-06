@@ -1,0 +1,47 @@
+
+
+.PageTab {
+
+    height: 80vh;
+    width: 100%;
+
+    overflow-y: scroll;
+    scrollbar-color: rgb(50,50,50);
+    scrollbar-width: auto;
+
+    background-color:blanchedalmond;
+}
+
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    padding: 1em;
+
+    gap: 1em;
+
+    text-transform: capitalize;
+}
+
+.Form textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+.FormMulti {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 1em;
+}
+
+.FormRow {
+    display: flex;
+    flex-direction:row;
+
+    justify-content: space-between;
+    
+}

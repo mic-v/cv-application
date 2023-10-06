@@ -1,0 +1,17 @@
+
+
+.CustomButton {
+    background-color: rgb(9, 78, 207);
+    color: white;
+
+    padding: 10px;
+
+    border: none;
+    
+    transition: 0.2s ease;
+}
+
+.CustomButton:hover {
+    background-color: rgb(36, 96, 207);
+
+}
